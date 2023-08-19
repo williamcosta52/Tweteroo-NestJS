@@ -24,4 +24,18 @@ export class AppService {
     this.tweets.push(body);
     return this.tweets;
   }
+  findTweets(startIndex: number, endIndex: number) {
+    const tweets = this.tweets;
+    if (!tweets) return [];
+    if (!startIndex && !endIndex) {
+      return tweets.slice(0, 15);
+    }
+    const limitedTweets = tweets.slice(startIndex, endIndex);
+    return limitedTweets;
+  }
+  findUserTweets(username: string) {
+    const tweets = this.tweets.filter((user) => user.username === username);
+    if (!tweets) return [];
+    return tweets;
+  }
 }
