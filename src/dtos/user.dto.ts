@@ -27,3 +27,8 @@ export class newTweet {
   })
   tweet: string;
 }
+export class Tweet {
+  username: string;
+  avatar: string;
+  tweet: string;
+}
