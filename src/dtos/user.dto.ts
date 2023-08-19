@@ -10,3 +10,12 @@ export class createUserDTO {
   @IsUrl()
   avatar: string;
 }
+export class newTweet {
+  @IsString()
+  @IsNotEmpty()
+  username: string;
+
+  @IsString()
+  @IsNotEmpty()
+  tweet: string;
+}
